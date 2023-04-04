@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  background-color: #1b1b32;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -39,14 +38,12 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
-  margin: 10px 10px auto 10px;
+  margin: 10px 10px 10px 10px;
   overflow: auto;
-  background-color: #1b1b32c9;
 }
 
 a:link, a:visited {
-  color: 9DC08B; 
+  color: black; 
 }
 
 .header {
@@ -70,13 +67,15 @@ aside {
 .nav {
   display: flex;
   width: 25%;
-  padding-bottom: 5px;
+  max-width: 100%;
+  margin: 0 10px 0 0;
+  padding-bottom: 10%;
+  padding-left: 10%;
 }
 
 .nav img {
   padding-right: 10px;
   padding-left: 10px;
-  height: auto;
 }
 
 hr {
@@ -97,6 +96,10 @@ main {
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
+  background-color: #1b1b32e0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100px;
 }
 
 h1 {
@@ -115,13 +118,70 @@ h1 {
 }
 
 .sidebar-left, .sidebar-right {
-  background-color: #a280f0e6;
-  width: 190px;
+  background-color: #bb5cbedd;
+  width: 250px;
   padding-top: 20px;
   margin: 10px;
+  border-radius: 10px;
 }
 
 .sidebar-right {
   float: right;
 }
 
+.HeaderArea {
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.scroll-left {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ background: #1b1b32c9;
+ color: rgb(255, 255, 255);
+ white-space: nowrap;
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 30s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #1b1b32;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #1b1b32;
+  color: #fff;
+}
+
+.sidebar-left a {
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: #c40093;
+}
